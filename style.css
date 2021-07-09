@@ -1,0 +1,26 @@
+.logo {
+    height: 20px;
+    width: 20px;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    left: 50px;
+}
+
+.titles {
+    color: white;
+    position: absolute;
+    left: 40px;
+    top: 150px;
+
+}
+
+.trending {
+    
+}
