@@ -38,3 +38,24 @@ a {
 nav {
     margin-bottom: 20px;
 }
+
+.dropdown {
+    position: absolute;
+    left: 275px;
+    top: 85px;
+}
+
+button {
+    background-color: grey;
+}
+
+.fa {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+}
+
+.flinks {
+    margin-bottom: 50px;
+}
