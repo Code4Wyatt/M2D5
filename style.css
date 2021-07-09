@@ -34,3 +34,7 @@ a {
     text-decoration: none;
     color: grey;
 }
+
+nav {
+    margin-bottom: 20px;
+}
