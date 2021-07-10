@@ -47,6 +47,7 @@ nav {
 
 button {
     background-color: grey;
+    border-radius: 5%;
 }
 
 .fa {
