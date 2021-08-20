@@ -80,3 +80,19 @@ form {
     width: 600px;
     color: white;
 }
+
+.btn-primary {
+    position: relative;
+    top: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-top: 10px;
+    
+}
+
+label {
+    position: relative;
+    margin-bottom: 5px;
+}
