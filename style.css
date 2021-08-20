@@ -61,3 +61,22 @@ button {
 .links {
     margin-bottom: 5px;
 }
+
+.title {
+    color: white;
+}
+
+.subtitle {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    color: rgb(151, 146, 146);
+}
+
+form {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 600px;
+    color: white;
+}
