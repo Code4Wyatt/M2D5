@@ -94,7 +94,7 @@
         </div>
       </div>
     </nav>
-    <main>
+    <main class="main">
       <div class="d-flex">
         <h1 class="title">Netflix Admin</h1>
         <h3 class="subtitle">Add a movie or show.</h3>
@@ -121,12 +121,12 @@
           </div>
           <div class="form-group">
             <label for="category">Category</label>
-            <input
-              type="text"
-              class="form-control"
-              id="category"
-              placeholder="Enter category"
-            />
+            <select class="form-control" id="category">
+              <option>Comedy</option>
+              <option>Action</option>
+              <option>Sci-Fi</option>
+              <option>Fantasy</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="imageUrl">Upload Movie/Show Image</label>

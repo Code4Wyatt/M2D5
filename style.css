@@ -96,3 +96,9 @@ label {
     position: relative;
     margin-bottom: 5px;
 }
+
+.comedy {
+    position: relative;
+    top: 5px;
+    left: -10px;
+}

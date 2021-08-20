@@ -16,7 +16,9 @@ const handleSubmit = async (event) => {
             body: JSON.stringify(newMovie),
             headers: {
                 "Content-Type": "application/json",
-                "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjllNzJkNTI2MjAwMTViNmRjYTIiLCJpYXQiOjE2Mjk0NTMyNDIsImV4cCI6MTYzMDY2Mjg0Mn0.eZpE0pLL9BIN2aTGCf3Q37c89KkMb6rKzGTce_siMvU",
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjllNzJkNTI2MjAwMTViNmRjYTIiLCJpYXQiOjE2Mjk0NTMyNDIsImV4cCI6MTYzMDY2Mjg0Mn0.eZpE0pLL9BIN2aTGCf3Q37c89KkMb6rKzGTce_siMvU",
+                "username": "testusername",
+                "password":"pass"
             }
         })
 
