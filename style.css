@@ -102,3 +102,10 @@ label {
     top: 5px;
     left: -10px;
 }
+
+.fantasy {
+    z-index: 1;
+    position: relative;
+    top: 10px;
+    left: -10px;
+}
