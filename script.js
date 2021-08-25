@@ -45,7 +45,7 @@ const displayMoviesFantasy = (movies) => {
         })
         
         
-         if (movies.fantasy) {
+         if (movies) {
         movies.forEach((movie) => {
           fantasySection.innerHTML += `<div class="col px-1"><a href="#"><img src="${movie.imageUrl}" alt="movie image 1"
                     class="w-100 img-fluid mb-2 mb-lg-0"></a>
