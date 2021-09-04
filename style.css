@@ -112,12 +112,12 @@ label {
 
 .footer {
     position: absolute;
-    bottom: 220px;
+    bottom: 20px;
     left: 20%;
 }
 .flinks {
     position: absolute;
-    bottom: 30px;
+    bottom: 0px;
     left: 20%;
 }
 
@@ -126,9 +126,10 @@ label {
     margin-bottom:50px;
 }
 .movie-cover{
-    width:99%;
+    width:200px;
     transition:0.3s;
     opacity: 0.7;
+    height: 300px;
 }
 .movie-cover:hover{
     opacity: 1;
