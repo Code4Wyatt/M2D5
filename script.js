@@ -3,7 +3,8 @@ window.onload = () => {
 }
 
 
-const getMovies = async() => {
+const getMovies = async () => {
+    const container = document.querySelector('.genres');
     try { 
         const rawData = await fetch("https://striveschool-api.herokuapp.com/api/movies/", {
             headers: {
@@ -38,89 +39,24 @@ const getMovies = async() => {
                 }
                 console.log("chunks:", chunks)
                 const gallery = `<div class="movie-gallery m-2">
-            <h5 class="text-light mt-2 mb-2">Trending Now</h5>
-            <div id="trending-now" class="carousel slide" data-bs-ride="carousel">
+            <h5 class="text-light mt-2 mb-2">${arr[0].category}</h5>
+            <div id="${arr[0].category}" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                ${chunks.map(chunk => `<div class="carousel-item active">
+                ${chunks.map((chunk) => `<div class="carousel-item ${i === 1 ? "active" : ""}">
                         <div class="movie-row">
                             <div class="row">
-                            ${chunk.map(movie => `<div class="col-md-2">
+                            ${chunk.map((movie) => `<div class="col-md-2">
                                     <img class="movie-cover" src="./assets/media/media0.jpg">
                                 </div>`)}
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media0.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media1.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media2.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media3.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media4.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media5.jpg">
-                                </div>
+                               
 
                             </div>
                         </div>
-                    </div>`)}
-                    <div class="carousel-item active">
-                        <div class="movie-row">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media0.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media1.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media2.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media3.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media4.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media5.jpg">
-                                </div>
+                    </div>`)
+                        .join("")}
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="movie-row">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media0.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media1.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media2.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media3.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media4.jpg">
-                                </div>
-                                <div class="col-md-2">
-                                    <img class="movie-cover" src="./assets/media/media5.jpg">
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#trending-now" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#${arr[0].category}" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
@@ -130,8 +66,9 @@ const getMovies = async() => {
                 </button>
             </div>
 
-        </div>`
-            })
+        </div>`;
+                container.innerHTML += gallery;
+            });
         }
        
     } catch (error) {
