@@ -109,3 +109,8 @@ label {
     top: 10px;
     left: -10px;
 }
+
+.flinks {
+    position: absolute;
+    bottom: 10px;
+}
