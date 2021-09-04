@@ -4,6 +4,7 @@ window.onload = () => {
 
 
 const getMovies = async () => {
+    //movie categories
     const container = document.querySelector('.genres');
     try { 
         const rawData = await fetch("https://striveschool-api.herokuapp.com/api/movies/", {
@@ -13,7 +14,7 @@ const getMovies = async () => {
             },
             //body: JSON.stringify(yourBody) ONLY IF NEEDED
         });
-
+        //these are actual movies 
         if (rawData.ok) {
             const categories = await rawData.json();
             console.log(categories);
