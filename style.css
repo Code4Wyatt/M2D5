@@ -41,7 +41,7 @@ nav {
 
 .dropdown {
     position: absolute;
-    left: 275px;
+    left: 215px;
     top: 85px;
 }
 
@@ -110,9 +110,15 @@ label {
     left: -10px;
 }
 
+.footer {
+    position: absolute;
+    bottom: 220px;
+    left: 20%;
+}
 .flinks {
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
+    left: 20%;
 }
 
 .movie-row{
@@ -138,4 +144,5 @@ label {
 
 .carousel-control-prev{
     margin-left:-5%;
-}
+
+    
