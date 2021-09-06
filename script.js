@@ -80,13 +80,13 @@ const getMovies = async () => {
 // </div>
 //                 `
                 const gallery = `<div class="movie-gallery m-2">
-            <h5 class="text-light mt-2 mb-2">${arr[0].category}</h5>
+            <h4 class="text-light mt-2 mb-2">${arr[0].category}</h4>
             <div id="${arr[0].category}" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                 ${chunks.map((chunk, i) => `<div class="carousel-item ${i === 1 ? "active" : ""}">
                         <div class="movie-row">
                             <div class="row">
-                            ${chunk.map((movie) => `<div class="col-md-2">
+                            ${chunk.map((movie) => `<div class="col-sm-4 col-lg-1 movie-cards">
                                     <img class="movie-cover" src="${movie.imageUrl}">
                                 </div>`)}
                                
