@@ -18,6 +18,14 @@ footer {
     margin-top: 1350px;
 }
 
+.bi-search {
+    margin-right: 15px;
+}
+
+.dropdown-menu-right {
+    right: 20px;
+}
+
 h1 {
     color: white;
     position: absolute;
