@@ -73,7 +73,8 @@ const displayEntries = async () => {
                     chunks.push(arr.slice(k, (k += 6)));
         }
                 console.log(chunks);
-                const gallery = `<div class="movie-gallery m-2 entry-div">
+                const gallery = `<div class="edit-section">
+                <div class="movie-gallery m-2 entry-div">
             <h4 class="text-light mt-2 mb-2">${arr[0].category}</h4>
             <div id="${arr[0].category}" class="">
                 <div class="">
@@ -82,13 +83,15 @@ const displayEntries = async () => {
                             <div class="row">
                             ${chunk.map((movie) => `<div class="col-sm-4 col-lg-1 movie-cards">
                                     <div style="color: white;">${movie.name}</div>
-                                    <button class="btn-danger" onclick="deleteEntry()">Delete</button>
+                                    <button class="btn btn-outline-secondary" onclick="deleteEntry()">Edit</button>
+                                    <button class="btn btn-outline-danger" onclick="deleteEntry()">Delete</button>
                                 </div>`)
                             .join("")}
                                
 
                             </div>
                         </div>
+                    </div>
                     </div>`)
                         .join("")}
 
