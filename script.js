@@ -38,47 +38,9 @@ const getMovies = async () => {
                 while (k < arr.length) {
                     chunks.push(arr.slice(k, (k += 6)));
                 }
-                console.log("chunks:", chunks)
-                // const gallery = `
-                //  ${chunks.map((chunk, i) => `
-                //                  ${chunk.map((movie) => `
-                //                     <img class="movie-cover img-fluid" src="${movie.imageUrl}">
-                //                 `)}
-                               
-
-                //              `)
-                //          .join("")}
-                // `
-//                 const gallery = `
-//                 <div class="movie-gallery m-2">
-//                 <h5 class="text-light mt-2 mb-2">${arr[0].category}</h5>
-//                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-//     <div class="carousel-inner">
-//      ${chunks.map((chunk, i) => `<div class="carousel-item ${i === 1 ? "active" : ""}">
-//                             <div class="movie-row">
-//                               <div class="row">
-//                                  ${chunk.map((movie) => `<div class="col-md-2">
-//                                     <img class="movie-cover" src="${movie.imageUrl}">
-//                                 </div>`)}
-                               
-
-//                              </div>
-//                          </div>
-//                      </div>`)
-//                          .join("")}
-  
-//     </div>
-//   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-//     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-//     <span class="visually-hidden">Previous</span>
-//   </button>
-//   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-//     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-//     <span class="visually-hidden">Next</span>
-//   </button>
-// </div>
-// </div>
-//                 `
+                console.log("chunks:", chunks);
+             
+                 
                 const gallery = `<div class="movie-gallery m-2">
             <h4 class="text-light mt-2 mb-2">${arr[0].category}</h4>
             <div id="${arr[0].category}" class="carousel slide" data-bs-ride="carousel">
