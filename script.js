@@ -48,7 +48,7 @@ const getMovies = async () => {
                 ${chunks.map((chunk, i) => `<div class="carousel-item ${i === 1 ? "active" : ""}">
                         <div class="movie-row">
                             <div class="row">
-                            ${chunk.map((movie) => `<div class="col-sm-3 col-lg-1 movie-cards">
+                            ${chunk.map((movie) => `<div class="col-sm-4 col-lg-1 movie-cards">
                                     <img class="movie-cover" src="${movie.imageUrl}">
                                 </div>`)
                             .join("")}
