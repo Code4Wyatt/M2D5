@@ -225,3 +225,22 @@ label {
 .form-control {
     background-color: rgb(231, 231, 231);
 }
+
+.info {
+    position: relative;
+    z-index: 2;
+    bottom: 15px;
+    left: 5px;
+    visibility: hidden;
+    color: red;
+}
+
+.movie-cards a{
+    visibility: hidden;
+}
+
+.movie-cards:hover svg{
+    visibility: visible;
+    z-index: 2;
+}
+
