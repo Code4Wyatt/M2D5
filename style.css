@@ -65,6 +65,15 @@ nav {
     top: 6px;
 }
 
+.dropdown-menu {
+    background-color: black;
+   
+}
+
+.dropdown-item {
+ color: white;
+}
+
 button {
     background-color: grey;
     border-radius: 5%;
