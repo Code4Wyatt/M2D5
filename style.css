@@ -156,7 +156,7 @@ label {
 }
 .movie-cover{
     width:280px;
-    max-height: 200px;
+    max-height: 180px;
     transition:0.3s;
     opacity: 0.7;
 }
