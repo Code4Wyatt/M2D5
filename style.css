@@ -208,7 +208,20 @@ label {
 }
 
 
-.btn-danger {
-    margin-top: 5px;
-    margin-bottom: 10px;
+.btn-outline-danger {
+    margin-left: 5px;
+   
+}
+
+.btn-outline-primary {
+    margin-top: 15px;
+}
+
+.category {
+    position: relative;
+    left: 25px;
+}
+
+.form-control {
+    background-color: rgb(231, 231, 231);
 }

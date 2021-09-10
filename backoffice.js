@@ -75,7 +75,7 @@ const displayEntries = async () => {
                 console.log(chunks);
                 const gallery = `<div class="edit-section">
                 <div class="movie-gallery m-2 entry-div">
-            <h4 class="text-light mt-2 mb-2">${arr[0].category}</h4>
+            <h4 class="text-light mt-2 mb-2 category">${arr[0].category}</h4>
             <div id="${arr[0].category}" class="">
                 <div class="">
                 ${chunks.map((chunk, i) => `<div class="">
