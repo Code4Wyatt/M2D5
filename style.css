@@ -11,10 +11,11 @@ body {
 
 }
 
-footer{
-    position: absolute;
-    margin-top: auto;
+footer {
+    position: relative;
     bottom: 0;
+    left: 5%;
+    margin-top: 1350px;
 }
 
 h1 {
@@ -132,21 +133,6 @@ label {
     position: relative;
     top: 10px;
     left: -10px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 30%;
-    margin-top: 350px;
-}
-
-.flinks {
-    
-    margin-bottom: 50px;
-    top: 10px;
-    left: 20%;
-    margin-right: 430px;
 }
 
 .movie-row{
