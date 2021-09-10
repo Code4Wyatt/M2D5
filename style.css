@@ -15,7 +15,7 @@ footer {
     position: relative;
     bottom: 0;
     left: 5%;
-    margin-top: 1350px;
+    margin-top: 1300px;
 }
 
 .bi-search {
@@ -189,3 +189,16 @@ label {
     transition: transform .6s ease-in-out;
 }
 
+
+
+.entry-div {
+    position: relative;
+    top: 100px;]
+    left: 260px;
+    margin-left: 25px !important;
+}
+
+.btn-danger {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

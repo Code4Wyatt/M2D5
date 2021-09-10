@@ -38,7 +38,7 @@ const handleSubmit = async (event) => {
 }
 
 const displayEntries = async () => {
-    const container = document.getElementsByClassName('.entriesGallery')
+    const container = document.querySelector('.entriesGallery');
 
     try {
         const entryData = await fetch("https://striveschool-api.herokuapp.com/api/movies/", {
@@ -73,11 +73,38 @@ const displayEntries = async () => {
                     chunks.push(arr.slice(k, (k += 6)));
         }
                 console.log(chunks);
-                const entries = `<div>${movies.imageUrl}</div>`;
-                container.innerHTML += entries;
+                const gallery = `<div class="movie-gallery m-2 entry-div">
+            <h4 class="text-light mt-2 mb-2">${arr[0].category}</h4>
+            <div id="${arr[0].category}" class="">
+                <div class="">
+                ${chunks.map((chunk, i) => `<div class="">
+                        <div class="movie-row">
+                            <div class="row">
+                            ${chunk.map((movie) => `<div class="col-sm-4 col-lg-1 movie-cards">
+                                    <div style="color: white;">${movie.name}</div>
+                                    <button class="btn-danger" onclick="deleteEntry()">Delete</button>
+                                </div>`)
+                            .join("")}
+                               
+
+                            </div>
+                        </div>
+                    </div>`)
+                        .join("")}
+
+                </div>
+               
+            </div>
+
+        </div>`;
+                container.innerHTML += gallery;
             })
         }
     } catch (error) {
         console.error(error);
     }
+}
+
+const deleteEntry = async () => {
+
 }
