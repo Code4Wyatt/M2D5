@@ -109,5 +109,9 @@ const displayEntries = async () => {
 }
 
 const deleteEntry = async () => {
+    try {
 
+    } catch (error) {
+        console.log(error)
+    }
 }
