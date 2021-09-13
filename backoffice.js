@@ -18,13 +18,13 @@ const headers = new Headers({
     "Content-Type": "application/json",
 });
 
-async function getMovieDetails(_id) {
-    const response = await fetch(url + _id, {
+async function getMovieDetails(id) {
+    const response = await fetch(url + id, {
         headers
     })
     
     const movie = await response.json()
-    console.log(JSON.stringify(movie))
+    console.log(movie)
 }
 
 const handleSubmit = async (event) => {
