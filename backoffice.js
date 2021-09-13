@@ -24,7 +24,23 @@ async function getMovieDetails(id) {
     })
     
     const movie = await response.json()
+    console.log(response)
     console.log(movie)
+}
+
+async function deleteMovie() {
+    try {
+        const response = await fetch("https://striveschool-api.herokuapp.com/api/movies/" + id, {
+        method: 'DELETE',
+        headers
+    })
+    const movie = await response.json()
+    if (!response.ok) throw new Errow("Failed to delete movie/show.")
+
+    alert('Deleted succesfully!')
+    } catch (error) {
+        alert(error.message)
+    }
 }
 
 const handleSubmit = async (event) => {
@@ -106,7 +122,7 @@ const displayEntries = async () => {
                             ${chunk.map((movie) => `<div class="col-sm-4 col-lg-1 movie-cards">
                                     <div style="color: white;">${movie.name}</div>
                                     <a><button class="btn btn-outline-secondary" onclick="deleteEntry()">Edit</button></a>
-                                    <button class="btn btn-outline-danger" onclick="deleteEntry()">Delete</button>
+                                    <button class="btn btn-outline-danger" onclick="deleteMovie()">Delete</button>
                                 </div>`)
                             .join("")}
                                
