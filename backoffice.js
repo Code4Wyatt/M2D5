@@ -3,6 +3,28 @@ window.onload = async () => {
 
     displayEntries();
 
+    if (id) {
+        document.querySelector('h3').innerHTML = "Edit Movie/Show";
+        getMovieDetails(id);
+    }
+
+}
+
+const params = new URLSearchParams(location.search)
+const id = params.get('id')
+const url = "https://striveschool-api.herokuapp.com/api/movies/"
+const headers = new Headers({
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjllNzJkNTI2MjAwMTViNmRjYTIiLCJpYXQiOjE2MzA3NzU5NTEsImV4cCI6MTYzMTk4NTU1MX0.bVwbyj0OXWNQQreEe-rKNeN5Zq68tI7aarukx9rnoWM",
+    "Content-Type": "application/json",
+});
+
+async function getMovieDetails(_id) {
+    const response = await fetch(url + _id, {
+        headers
+    })
+    
+    const movie = await response.json()
+    console.log(JSON.stringify(movie))
 }
 
 const handleSubmit = async (event) => {
@@ -83,7 +105,7 @@ const displayEntries = async () => {
                             <div class="row">
                             ${chunk.map((movie) => `<div class="col-sm-4 col-lg-1 movie-cards">
                                     <div style="color: white;">${movie.name}</div>
-                                    <button class="btn btn-outline-secondary" onclick="deleteEntry()">Edit</button>
+                                    <a><button class="btn btn-outline-secondary" onclick="deleteEntry()">Edit</button></a>
                                     <button class="btn btn-outline-danger" onclick="deleteEntry()">Delete</button>
                                 </div>`)
                             .join("")}
@@ -108,10 +130,19 @@ const displayEntries = async () => {
     }
 }
 
-const deleteEntry = async () => {
+const deleteEntry = async (id) => {
     try {
-
-    } catch (error) {
+        const delData = await fetch('https://striveschool-api.herokuapp.com/api/movies/' + id, {
+            method: "DELETE",
+            headers: {
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjllNzJkNTI2MjAwMTViNmRjYTIiLCJpYXQiOjE2MzA3NzU5NTEsImV4cCI6MTYzMTk4NTU1MX0.bVwbyj0OXWNQQreEe-rKNeN5Zq68tI7aarukx9rnoWM",
+                "Content-Type": "application/json",
+            }
+                
+        });
+        //     const data = await delData.json();
+        // console.log(data);
+    } catch(error) {
         console.log(error)
     }
 }
